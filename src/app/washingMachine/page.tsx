@@ -12,7 +12,7 @@ export default function Home() {
 
   // Função para buscar dados da API
   const fetchData = async () => {
-    const response = await fetch('../api/receiveESP32data');
+    const response = await fetch('/api/receiveESP32data');
     const data = await response.json();
     setSensorData(data);
   };
