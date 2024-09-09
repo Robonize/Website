@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 
 interface SensorData {
@@ -22,14 +24,14 @@ export default function Home() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Monitoramento da Máquina de Lavar</h1>
+      <h1>Washing machine monitoring</h1>
       {sensorData ? (
         <div>
-          <p>Status da máquina: {sensorData.status}</p>
-          <p>Valor do sensor de luminosidade: {sensorData.valor_sensor}</p>
+          <p>Machine status: {sensorData.status}</p>
+          <p>Sensor data: {sensorData.valor_sensor}</p>
         </div>
       ) : (
-        <p>Carregando dados...</p>
+        <p>Loading data...</p>
       )}
     </div>
   );
