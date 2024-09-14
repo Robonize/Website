@@ -13,6 +13,7 @@ export async function GET() {
 
 // Lida com a requisição POST, atualizando os dados do sensor
 export async function POST(request: NextRequest) {
+  console.log(request)
   try {
     const body = await request.json();
     const { status, valor_sensor } = body;
