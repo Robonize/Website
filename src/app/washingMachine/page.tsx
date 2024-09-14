@@ -19,7 +19,6 @@ export default function Home() {
       }
       const data = await response.json();
       setSensorData(data);
-      console.log("Deu bom!")
     } catch (error) {
       console.error('Error fetching sensor data:', error);
     }
