@@ -12,7 +12,7 @@ export default function Home() {
 
   // Função para buscar dados da API
   const fetchData = async () => {
-    const response = await fetch('http://robonize.vercel.app/api/receiveESP32data');
+    const response = await fetch('https://robonize.vercel.app/api/receiveESP32data');
     const data = await response.json();
     setSensorData(data);
   };
