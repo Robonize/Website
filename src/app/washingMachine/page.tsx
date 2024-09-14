@@ -12,14 +12,30 @@ export default function Home() {
 
   // Função para buscar dados da API
   const fetchData = async () => {
-    const response = await fetch('https://robonize.vercel.app/api/receiveESP32data');
-    const data = await response.json();
-    setSensorData(data);
+    try {
+      const response = await fetch('https://robonize.vercel.app/api/receiveESP32data');
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+      setSensorData(data);
+    } catch (error) {
+      console.error('Error fetching sensor data:', error);
+    }
   };
 
-  // Buscar os dados ao carregar a página
+  // Buscar os dados ao carregar a página e configurar o intervalo para atualizar constantemente
   useEffect(() => {
+    // Busca inicial
     fetchData();
+
+    // Configurar intervalo para atualizar a cada 1 segundos 
+    const interval = setInterval(() => {
+      fetchData();
+    }, 1000);
+
+    // Limpar o intervalo quando o componente for desmontado
+    return () => clearInterval(interval);
   }, []);
 
   return (
