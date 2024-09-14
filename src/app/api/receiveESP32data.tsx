@@ -1,19 +1,22 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    
-    const { status, valor_sensor } = req.body;
+import { NextRequest, NextResponse } from 'next/server';
 
-    console.log("Deu bom caralho!")
-    console.log(req.body)
+export async function GET(request: NextRequest) {
+  return NextResponse.json({ status: 'OK', valor_sensor: 123 });
+}
 
-    res.status(200).json({
+export async function POST(request: NextRequest) {
+  const body = await request.json();
+  const { status, valor_sensor } = body;
+
+  if (status && valor_sensor !== undefined) {
+    return NextResponse.json({
       message: 'Dados recebidos com sucesso!',
-      status: status,
-      valor_sensor: valor_sensor,
+      status,
+      valor_sensor,
     });
-  } else {
-    res.status(405).json({ message: 'Método não permitido, use POST.' });
   }
+
+  return NextResponse.json({ message: 'Dados inválidos' }, { status: 400 });
 }
