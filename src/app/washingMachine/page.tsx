@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import SideBar from '../components/sideBar';
 
 interface SensorData {
   status: string;
@@ -39,8 +40,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Washing machine monitoring</h1>
+
+    <><SideBar />
+    
+    <div className='w-auto h-screen ml-48 flex flex-col items-center'>
+      <div className='bg-[#757575] h-2/5 w-[1500px] rounded-lg mt-16'>
+
+      </div>
+      <div className='bg-[#757575] h-2/5 w-[1500px] rounded-lg mt-16'>
+
+      </div>
+      <div className=' w-72 h-36'>
+         <h1>Washing machine monitoring</h1>
       {sensorData ? (
         <div>
           <p>Machine status: {sensorData.status}</p>
@@ -49,6 +60,9 @@ export default function Home() {
       ) : (
         <p>Loading data...</p>
       )}
+      </div>
+     
     </div>
+    </>
   );
 }

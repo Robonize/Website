@@ -5,6 +5,11 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <h1 className="text-6xl ">Robonize</h1>
         <h2>The future needs machine tokenization</h2>
+        <a href="/washingMachine">
+          <button className="bg-green-600 p-3 rounded-xl">
+            Washing Machine Test
+          </button>
+        </a>
       </main>
       
     </div>
