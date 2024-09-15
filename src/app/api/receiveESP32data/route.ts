@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // Variáveis para armazenar o status e o valor do sensor
 let sensorData = {
-  status: 'OK',
-  valor_sensor: 123,
+  status: 'No data',
+  valor_sensor: null,
 };
 
 // Lida com a requisição GET, retornando os dados do sensor armazenados

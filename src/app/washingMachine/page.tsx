@@ -44,8 +44,14 @@ export default function Home() {
     <><SideBar />
     
     <div className='w-auto h-screen ml-48 flex flex-col items-center'>
-      <div className='bg-[#757575] h-2/5 w-[1500px] rounded-lg mt-16'>
-
+      <div className='bg-[#757575] h-2/5 w-[1500px] rounded-lg mt-16 text-white '>
+      {sensorData ? (
+        <div className='m-10 text-6xl'>
+          <p>Machine status: {sensorData.status}</p>
+        </div>
+      ) : (
+        <p className='m-10 text-6xl'>Loading data...</p>
+      )}
       </div>
       <div className='bg-[#757575] h-2/5 w-[1500px] rounded-lg mt-16'>
 
