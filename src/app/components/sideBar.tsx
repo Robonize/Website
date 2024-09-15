@@ -2,8 +2,7 @@
 
 import logo from "../assets/logo v0.21.png"
 import Image from "next/image";
-import SideBarElement from "./sideBarElement"
-import { useState } from "react"
+
 
 const SideBar = () => {
 
