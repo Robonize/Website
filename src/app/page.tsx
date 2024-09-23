@@ -1,10 +1,23 @@
 
+import logo from "./assets/logo v0.21.png"
+import Image from "next/image";
+
+
 export default function Home() {
   return (
     <div className="bg-slate-950 h-screen">
       <main className="flex flex-col gap-8 row-start-2 sm:items-start h-full">
-        <header className="bg-slate-800 h-24 w-full">
-          <a href="/">Robonize</a>
+        <header className="bg-slate-800 h-24 w-full flex flex-row align-middle">
+          <div className="h-20 w-20">
+            <a href="/" className="">
+              <Image src={logo} alt="Robonize logo" className=""/>
+            </a>
+          </div>
+          <div className="grid grid-cols-3 content-center ml-56 font-bold">
+            <a href="/washingMachine" className=" h-10 px-20 text-2xl text-[#259776]">Launch</a>
+            <a href="/" className=" h-10 px-20 text-2xl">Team</a>
+            <a href="/"className="h-10 px-20 text-2xl">How it works</a>
+          </div>
         </header>
         <div className="flex flex-col justify-center h-full w-screen">
           <h1 className="text-9xl flex justify-center">Robonize</h1>
