@@ -23,7 +23,7 @@ export default function Home() {
         <div className="flex flex-col justify-center h-full w-screen">
           <Image src={logo} alt="Robonize logo" className="self-center h-60 w-60 "/>
           <h1 className="text-9xl flex justify-center font-bold">Robonize</h1>
-          <a href="/washingMachine" className="flex justify-center py-10">
+          <a href="/Overview" className="flex justify-center py-10">
             <button className="bg-[#259776] py-5 px-9 rounded-3xl text-6xl">
               Launch
             </button>
