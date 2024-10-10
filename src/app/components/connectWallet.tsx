@@ -43,8 +43,6 @@ import React, {
     }, [wallet]);
   
     const copyAddress = useCallback(() => {
-      const formatWallet =
-        truncateWallet(wallet?.publicKey?.toBase58(), 10) || "";
       setOpenDropdown(false);
     }, [wallet]);
   
