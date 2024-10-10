@@ -9,7 +9,7 @@ export const truncateWallet = (
   
     separator = separator || "...";
   
-    let sepLen = separator.length,
+    const sepLen = separator.length,
       charsToShow = outputLength - sepLen,
       frontChars = Math.ceil(charsToShow / 2),
       backChars = Math.ceil(charsToShow / 2);

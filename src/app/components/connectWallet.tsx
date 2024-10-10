@@ -67,8 +67,8 @@ import React, {
     }, [changeWallet, copyAddress, disconnectWallet]);
   
     useEffect(() => {
-      const handleClickOutside = (event: any) => {
-        if (filterRef.current && !filterRef.current.contains(event.target)) {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (filterRef.current && !filterRef.current.contains(event.target  as Node)) {
           setOpenDropdown(false);
         }
       };
