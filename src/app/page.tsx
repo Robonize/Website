@@ -17,7 +17,7 @@ export default function Home() {
             <a href="/washingMachine" className=" h-10 px-20 text-2xl text-[#259776]">Launch</a>
             <a href="/" className=" h-10 px-20 text-2xl">Team</a>
             <a href="/"className="h-10 px-20 text-2xl">How it works</a>
-            <a href="https://x.com/robonize"className="h-10 px-20 text-2xl">Our twitter</a>
+            <a href="https://x.com/_robonize"className="h-10 px-20 text-2xl">Our twitter</a>
           </div>
         </header>
         <div className="flex flex-col justify-center h-full w-screen">

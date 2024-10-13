@@ -1,5 +1,5 @@
 import { useWallet } from "@solana/wallet-adapter-react";
-
+import { WalletName } from '@solana/wallet-adapter-base';
 import React, { useCallback } from "react";
 import { cn } from "../utils/cn";
 import Image from "next/image";
@@ -11,13 +11,16 @@ const ModalConnect: React.FC = () => {
   const { openConnect, setOpenConnect } = useSolana();
   const { wallets, select } = useWallet();
 
+
+
   const handleConnectPhantom = useCallback(
-    (walletName: string) => {
-      select(walletName as any);
-      setOpenConnect(false);
-    },
-    [setOpenConnect, select]
-  );
+  (walletName: string) => {
+    const WalletName = walletName as WalletName;
+    select(WalletName);
+    setOpenConnect(false);
+  },
+  [setOpenConnect, select]
+);
 
 
   return (
