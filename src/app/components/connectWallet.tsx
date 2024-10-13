@@ -110,7 +110,7 @@ import React, {
             </div>
           </div>
         {openDropdown &&
-        <div className={cn("rounded-xl p-2 m-1 bg-gradient-to-r from-purple-800 to-sky-600", openDropdown && "wallet-adapter-dropdown-list-active")}>
+        <div className={cn("rounded-xl p-2 m-1 bg-[#259776] ", openDropdown && "wallet-adapter-dropdown-list-active")}>
           <div className="flex items-center mb-2 px-2.5 pointer-events-none">
             <Image
               className="mr-2"
@@ -127,7 +127,7 @@ import React, {
             <div
               key={index}
               onClick={item.action}
-              className="wallet-adapter-dropdown-list-item cursor-pointer	font-bold text-white hover:bg-sky-600 hover:rounded-lg hover:p-1"
+              className="wallet-adapter-dropdown-list-item cursor-pointer	font-bold text-white hover:bg-[#292929] hover:rounded-lg hover:p-1 my-2"
             >
               {item.title}
             </div>

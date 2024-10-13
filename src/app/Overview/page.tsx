@@ -1,12 +1,27 @@
 "use client";
 
+import ConnectWallet from '../components/connectWallet';
+import ModalConnect from '../components/ModalConnect';
 import SideBar from '../components/sideBar';
+import { SolanaProvider } from '../context/SolanaContext';
 
 export default function Home() {
 
   return (
 
     <><SideBar />
+
+    <SolanaProvider>
+        
+        <div>
+            <div className="fixed top-0 right-0 flex justify-end">
+                <ConnectWallet />
+                <ModalConnect />
+            </div>
+       </div>
+
+    </SolanaProvider>
+
     
     <div className='w-auto h-screen ml-48 flex flex-col items-center'>
       <div className='h-80 w-[1400px] bg-[#259776] mt-16 rounded-2xl shadow-2xl text-5xl font-bold'>
