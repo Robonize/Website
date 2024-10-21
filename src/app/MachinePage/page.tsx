@@ -24,9 +24,9 @@ export default function Home() {
 
     
     <div className='w-auto h-screen ml-48 flex flex-col items-center'>
-      <div className='mt-12'>
+      <div className='mt-11'>
         <p className='text-white text-4xl'>Machine Data</p>
-        <div className='flex flex-row justify-center items-center h-72 w-[1400px] bg-[#259776]  rounded-2xl shadow-2xl text-5xl font-bold'>
+        <div className='flex flex-row justify-center items-center h-64 w-[1400px] bg-[#259776]  rounded-2xl shadow-2xl text-5xl font-bold'>
           <div className="h-40 w-96 bg-slate-200 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-black ">
             <p className='text-3xl'>Units Produced (24h)</p>
             <p className='text-4xl mt-5'>100.000</p>
@@ -34,12 +34,16 @@ export default function Home() {
         </div>
       </div>
       
-      <div className='mt-10'>
+      <div className='mt-9'>
       <p className='text-white text-4xl'>Machine financial info</p>
-        <div className='h-[450px] w-[1400px] bg-[#259776] flex flex-col rounded-2xl shadow-2xl text-4xl font-bold items-center'>
+        <div className='h-[410px] w-[1400px] bg-[#259776] flex flex-col rounded-2xl shadow-2xl text-4xl font-bold items-center'>
         
 
         </div>
+      </div>
+
+      <div className='mt-7 flex flex-row justify-end w-[1400px]'>
+        <button className="bg-[#259776] py-3 px-8 rounded-xl text-4xl shadow-2xl hover:bg-[#2f7d67] hover:-translate-y-1 font-bold">Buy Token</button>
       </div>
       
     </div>
