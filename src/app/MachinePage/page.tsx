@@ -36,8 +36,15 @@ export default function Home() {
       
       <div className='mt-9'>
       <p className='text-white text-4xl'>Machine financial info</p>
-        <div className='h-[410px] w-[1400px] bg-[#259776] flex flex-col rounded-2xl shadow-2xl text-4xl font-bold items-center'>
-        
+        <div className='h-[410px] w-[1400px] bg-[#259776] flex flex-col rounded-2xl shadow-2xl text-2xl font-bold items-start'>
+          <div className="h-24 w-64 mt-10 ml-10 bg-slate-200 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-black ">
+              <p className='text-2xl'>Token Price</p>
+              <p className='text-3xl mt-5'>$2.20</p>
+          </div>
+          <div className="h-24 w-64 mt-10 ml-10 bg-slate-200 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-black ">
+              <p className='text-2xl'>Amount of tokens</p>
+              <p className='text-3xl mt-5'>10.000</p>
+          </div>
 
         </div>
       </div>
